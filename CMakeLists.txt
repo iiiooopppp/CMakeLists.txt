@@ -1,3 +1,4 @@
+
 cmake_minimum_required(VERSION 3.22)
 
 set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
@@ -14,14 +15,14 @@ FetchContent_MakeAvailable(JUCE)
 juce_add_plugin(CigaretteBurn
     COMPANY_NAME "Skyline"
     PLUGIN_MANUFACTURER_CODE Skyl
-    PLUGIN_CODE Asnd
+    PLUGIN_CODE Nbla
     FORMATS VST3
-    PRODUCT_NAME "Ascend"
-    IS_SYNTH FALSE
-    NEEDS_MIDI_INPUT FALSE
+    PRODUCT_NAME "Nebula"
+    IS_SYNTH TRUE
+    NEEDS_MIDI_INPUT TRUE
     NEEDS_MIDI_OUTPUT FALSE
     COPY_PLUGIN_AFTER_BUILD FALSE
-    VST3_CATEGORIES Fx Reverb)
+    VST3_CATEGORIES Instrument Synth)
 
 juce_generate_juce_header(CigaretteBurn)
 
